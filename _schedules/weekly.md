@@ -20,35 +20,18 @@ timeline:
   - '5:30 PM'
 schedule:
   - name: Monday
-    events:
-      - name: 01 Lecture
-        start: 10:00 AM
-        end: 10:50 AM
-        location: Briggs 001
-      - name: 02 Lecture
-        start: 11:00 AM
-        end: 11:50 AM
-        location: Briggs 001
   - name: Tuesday
+    events:
+      - name: Lecture
+        start: 11:00 AM
+        end: 12:15 PM
+        location: Briggs 119
   - name: Wednesday
-    events:
-      - name: 01 Lecture
-        start: 10:00 AM
-        end: 10:50 AM
-        location: Briggs 001
-      - name: 02 Lecture
-        start: 11:00 AM
-        end: 11:50 AM
-        location: Briggs 001
   - name: Thursday
-  - name: Friday
     events:
-      - name: 01 Lab
-        start: 9:00 AM
-        end: 10:50 AM
-        location: Briggs 001
-      - name: 02 Lab
+      - name: Lecture
         start: 11:00 AM
-        end: 12:50 PM
-        location: Briggs 001
+        end: 12:15 PM
+        location: Briggs 119
+  - name: Friday
 ---
