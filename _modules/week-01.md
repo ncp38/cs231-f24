@@ -20,6 +20,7 @@ Tue, Sep 10
 
 Thu, Sep 12
 : **Logic gates, intro to Altera.**  
+: **Lab**{: .label .label-lab } [**Lab 1**](labs/lab1/) (due *9/27/24*)
 
 Tue, Sep 17
 : **K-maps**
@@ -36,10 +37,10 @@ Thu, Sep 26
  
 Tue, Oct 1 
 : **Ripple-carry adders, multiplexing** 
+: **Lab**{: .label .label-lab } [**Lab 2**](labs/lab2/) (due *10/14/24*)
   
 Thu, Oct 3
 : **code converters, other arithmetic/logic circuits, and ALU** 
-: **Lab**{: .label .label-lab } [**Lab 2**](labs/lab2/) (due *10/14/24*)
 : **Homework**{: .label .label-hw } [**Homework 3**](homework/hw3) (due *10/17/24*)
 
 Tue, Oct 8
