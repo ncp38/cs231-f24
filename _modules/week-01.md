@@ -64,7 +64,7 @@ Thu, Oct 24
 : **Exam review**  
 
 Tue, Oct 29
-: **Midterm I**{: .label .label-exam }
+: **Exam I**{: .label .label-exam }
 
 Thu, Oct 31
 : **Assembly intro**
@@ -93,10 +93,10 @@ Tue, Nov 19
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
-: **Lab**{: .label .label-lab } [**Lab 6**](labs/lab5/) (due *12/9/24*)
+: **Lab**{: .label .label-lab } [**Lab 6**](labs/lab6/) (due *12/9/24*)
 
 Tue, Nov 26
-: **Midterm II**{: .label .label-exam }
+: **Exam II**{: .label .label-exam }
 : **Reading**{: .label .label-reading} Chapter 6 (Memory).
 
 Thu, Nov 28
