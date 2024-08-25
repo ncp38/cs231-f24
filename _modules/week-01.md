@@ -16,18 +16,18 @@ Thu, Sep 5
 
 Tue, Sep 10
 : **Boolean algebra and minimization by proof**  
-: **Homework**{: .label .label-hw } [**Homework 1**](homework/hw1) due *Sep. 19*
+: [**Homework 1**](homework/hw1){: .label .label-hw } due *Sep. 19*
 
 Thu, Sep 12
 : **Logic gates, intro to Altera.**  
-: **Lab**{: .label .label-lab } [**Lab 1**](labs/lab1/) due *Sep. 27*
+: [**Lab 1**](labs/lab1/){: .label .label-lab } due *Sep. 27*
 
 Tue, Sep 17
 : **K-maps**
 
 Thu, Sep 19
 : **K-maps with 3 and 4 variables**  
-: **Homework**{: .label .label-hw } [**Homework 2**](homework/hw2) due *Oct. 3*
+: [**Homework 2**](homework/hw2){: .label .label-hw } due *Oct. 3*
 
 Tue, Sep 24
 : **K-maps with any variables, integrated circuits**  
@@ -37,11 +37,11 @@ Thu, Sep 26
  
 Tue, Oct 1 
 : **Ripple-carry adders, multiplexing** 
-: **Lab**{: .label .label-lab } [**Lab 2**](labs/lab2/) due *Oct. 14*
+: [**Lab 2**](labs/lab2/){: .label .label-lab } due *Oct. 14*
   
 Thu, Oct 3
 : **code converters, other arithmetic/logic circuits, and ALU** 
-: **Homework**{: .label .label-hw } [**Homework 3**](homework/hw3) due *Oct. 17*
+: [**Homework 3**](homework/hw3){: .label .label-hw } due *Oct. 17*
 
 Tue, Oct 8
 : **Sequential circuits and flip-flops**  
@@ -51,11 +51,11 @@ Thu, Oct 10
 
 Tue, Oct 15
 : **Signed values and 2s complement** 
-: **Lab**{: .label .label-lab } [**Lab 3**](labs/lab3/) due *Oct. 25*
+: [**Lab 3**](labs/lab3/){: .label .label-lab } due *Oct. 25*
 
 Thu, Oct 17
 : **Floating point numbers, ASCII** 
-: **Homework**{: .label .label-hw } [**Homework 4**](homework/hw4) due *Oct. 31*
+: [**Homework 4**](homework/hw4){: .label .label-hw } due *Oct. 31*
 
 Tue, Oct 22
 : No class, Fall break
@@ -68,19 +68,19 @@ Tue, Oct 29
 
 Thu, Oct 31
 : **Assembly intro**
-: **Lab**{: .label .label-lab } [**Lab 4**](labs/lab4/) due *Nov. 11*
+: [**Lab 4**](labs/lab4/){: .label .label-lab } due *Nov. 11*
 Happy Halloween!
 
 Tue, Nov 5
 : **NIOS** 
-: **Homework**{: .label .label-hw } [**Homework 5**](homework/hw5) due *Nov. 19*
+: [**Homework 5**](homework/hw5){: .label .label-hw } due *Nov. 19*
 
 Thu, Nov 7
 : **NIOS ALU, L/S, Control Flow** 
 
 Tue, Nov 12
 : **NIOS arrays and functions**  
-: **Lab**{: .label .label-lab } [**Lab 5**](labs/lab5/) due *Nov. 20*
+: [**Lab 5**](labs/lab5/){: .label .label-lab } due *Nov. 20*
 : **Reading**{: .label .label-reading} Chapter 4 (buses and memory).
 
 Thu, Nov 14
@@ -89,15 +89,15 @@ Thu, Nov 14
 
 Tue, Nov 19
 : **FDXW cycle and pipelining**
-: **Homework**{: .label .label-hw } [**Homework 6**](homework/hw6) due *Dec. 3*
+: [**Homework 6**](homework/hw6){: .label .label-hw } due *Dec. 3*
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
-: **Lab 6**{: .label .label-lab }(labs/lab6/) due *Dec. 9*
+: [**Lab 6**](labs/lab6/){: .label .label-lab } due *Dec. 9*
 
 Tue, Nov 26
 : **Exam II**{: .label .label-exam }
-: **Chapter 6 (Memory)**{: .label .label-reading} 
+: **Reading**{: .label .label-reading} Chapter 6 (Memory)
 
 Thu, Nov 28
 : No class, Thanksgiving break
