@@ -26,7 +26,7 @@ seo:
 - [Syllabus](syllabus/syllabus-231-f24.pdf) and [additional policies](syllabus/additional-policies.pdf).
 
 ## Resources
-- [](https://rhodescollege.atlassian.net/wiki/spaces/HPCL/pages/2661351440/Overview+of+the+Hardware+Lab+Environment): Confluence guide for the Hardware Lab and Quartus
+- [Confluence](https://rhodescollege.atlassian.net/wiki/spaces/HPCL/pages/2661351440/Overview+of+the+Hardware+Lab+Environment): Guide for the Hardware Lab and Quartus
      
 
 ## Calendar
