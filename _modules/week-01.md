@@ -7,12 +7,15 @@ title: ""
 
 Thu, Aug 29
 : **Introduction, history of computing, modern computers**  
+: **Reading**{: .label .label-reading} Essentials, ch. 1
 
 Tue, Sep 3
 : **Modern computers and 2-number system**  
+: **Reading**{: .label .label-reading} Essentials, ch. 2.1-2.3
 
 Thu, Sep 5
 : **Boolean algebra**  
+: **Reading**{: .label .label-reading} Essentials, ch. 3.1-3.2
 
 Tue, Sep 10
 : **Boolean algebra and minimization by proof**  
@@ -21,9 +24,11 @@ Tue, Sep 10
 Thu, Sep 12
 : **Logic gates, intro to Altera.**  
 : [**Lab 1**](labs/lab1/){: .label .label-lab } due *Sep. 27*
+: **Reading**{: .label .label-reading} Essentials, ch. 3.3
 
 Tue, Sep 17
 : **K-maps**
+: **Reading**{: .label .label-reading} Essentials, ch. 3.4
 
 Thu, Sep 19
 : **K-maps with 3 and 4 variables**  
@@ -31,13 +36,16 @@ Thu, Sep 19
 
 Tue, Sep 24
 : **K-maps with any variables, integrated circuits**  
+: **Reading**{: .label .label-reading} Essentials, ch. 3.5
 
 Thu, Sep 26
 : **Combinational circuits and adders**  
- 
+: **Reading**{: .label .label-reading} Essentials, ch. 3.6
+
 Tue, Oct 1 
 : **Ripple-carry adders, multiplexing** 
 : [**Lab 2**](labs/lab2/){: .label .label-lab } due *Oct. 14*
+: **Reading**{: .label .label-reading} Essentials, ch. 3.7
   
 Thu, Oct 3
 : **code converters, other arithmetic/logic circuits, and ALU** 
@@ -52,10 +60,12 @@ Thu, Oct 10
 Tue, Oct 15
 : **Signed values and 2s complement** 
 : [**Lab 3**](labs/lab3/){: .label .label-lab } due *Oct. 25*
+: **Reading**{: .label .label-reading} Essentials, ch. 2.4
 
 Thu, Oct 17
 : **Floating point numbers, ASCII** 
 : [**Homework 4**](homework/hw4){: .label .label-hw } due *Oct. 31*
+: **Reading**{: .label .label-reading} Essentials, ch. 2.5-2.6
 
 Tue, Oct 22
 : No class, Fall break
