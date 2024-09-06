@@ -24,6 +24,8 @@ Tue, Sep 10
 Thu, Sep 12
 : **Logic gates, intro to Altera.**  
 : [**Lab 1**](labs/lab1/){: .label .label-lab } due *Sep. 27*
+: - [*Intro Tutorial*](labs/lab1/){: .label .label-lab } Quartus II Introduction using Schematic Designs
+: - [*Pin Assignment*](labs/lab1/){: .label .label-lab } DE2_115.qsf
 : **Reading**{: .label .label-reading} Essentials, ch. 3.3
 
 Tue, Sep 17

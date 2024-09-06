@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\usepackage[top=1in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{url}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+%\maketitle
+
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{{\Large COMP 231\\
+      Introduction to Computer Organization\\Lab 1}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\vspace{.25in}
+
+This lab will consist of a Quartus project folder, submitted as a single ZIP
+file, via Canvas (\url{http://canvas.rhodes.edu/}).  {\bf You must submit a
+.zip file.} \\
+
+\noindent{\bf Important information for using the lab workstations:}
+\begin{enumerate}
+  \item Start by creating a new folder on your desktop named {\em 231}.
+
+  \item Create a new folder inside of the 231 folder called {\em lab1}. This is where you will save your tutorial.
+
+  \item Follow the tutorial. When it prompts you where you want to save the
+    folder -- {\bf You must change it to a different directory.} Instead of the
+    {\tt C:\textbackslash intelFPGA\_lite\textbackslash18.1}$\ldots$ folder,
+    switch it to the {\em lab1} folder you created under the Desktop.
+
+  \item Please do not save any work in the {\tt intelFPGA\_lite} folder or
+    anywhere else on the {\tt C:\textbackslash} drive.
+
+  \item When you have completed the project, right click on your {\em lab1} folder and use the {\tt 7-Zip} menu
+    to save as {\tt lab1.zip}.
+
+  \item Save your entire Desktop/231 folder to a flash drive (in the file explorer)
+
+  \item Upload your .ZIP file to Canvas.
+\end{enumerate}
+
+You are encouraged to use one of the six workstations in the hardware
+lab to complete this assignment. On your personal computer, you may also install the Digital software package to simulate your designs (\url{https://github.com/hneemann/Digital}) or the Altera tools (ask me for more details).
+
+\section{Quartus Tutorial}
+
+Once you have successfully logged into the hardware lab computer,
+read through and follow the exercise specified in the {\em
+  Quartus II Introduction Using Schematic Designs} PDF (on
+the course website, listed under Lab 1). Create the {\tt introtutorial} Quartus project in your {\em
+  name}{\tt\_lab1} folder.
+
+
+In this tutorial, you will implement a simple exclusive-OR (XOR)
+circuit and load it on the FPGA board. This circuit will use the
+switches (SW[0] and SW[1]) on the DE2-115 board to turn on and off the LED
+light on the board according to the XOR truth table.
+
+Some notes:
+
+\begin{itemize}
+  \item The pin assignment procedure in section 7 is suboptimal. The pins
+    for the DE2-115 are incorrect and the entire process is overly complicated for
+    the other FPGA assignments in the class. To remedy this, you should label your
+    inputs in the XOR circuit with the names {\tt SW[0]} and {\tt SW[1]}. Also label your
+    output {\tt LEDG[0]} or {\tt LEDR[0]} depending on whether you like red or green LEDs.
+    Next, from the {\it Assignments} menu, select {\it Import Assignments...} and
+    browse to the {\tt DE2\_115.qsf} file (on the course website, listed under Lab 1). This should leave you
+    with valid pin assignments.
+
+  \item You do not need to perform the simulation step in section 8 of the PDF.
+
+  \item When starting the programmer, you may have to add the compiled Quartus
+    (.sof) file, which can be found in the {\tt output\_files} folder in your
+    {\tt introtutorial} project.
+\end{itemize}
+
+
+\section*{Submission}
+
+When you have completed this entire exercise and have a functioning
+program, submit your lab 1 project folder as specified above to Canvas.
+
+\end{document}
+
