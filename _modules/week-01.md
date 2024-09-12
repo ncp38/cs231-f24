@@ -18,15 +18,15 @@ Thu, Sep 5
 : **Reading**{: .label .label-reading} Essentials, ch. 3.1-3.2
 
 Tue, Sep 10
-: **Boolean algebra and minimization by proof**  
-: [**Homework 1**](homework/hw1.pdf){: .label .label-hw } due *Sep. 19*
-
-Thu, Sep 12
 : **Logic gates, intro to Altera.**  
 : [**Lab 1**](labs/lab1/lab1.pdf){: .label .label-lab } due *Sep. 27*
 : - [*Intro Tutorial*](labs/lab1/Quartus_II_Introduction.pdf){: .label .label-lab } Quartus II Introduction using Schematic Designs
 : - [*Pin Assignment*](labs/lab1/DE2_115.qsf){: .label .label-lab } DE2_115.qsf
 : **Reading**{: .label .label-reading} Essentials, ch. 3.3
+
+Thu, Sep 12
+: **Boolean algebra and minimization by proof**  
+: [**Homework 1**](homework/hw1.pdf){: .label .label-hw } due *Sep. 19*
 
 Tue, Sep 17
 : **K-maps**
