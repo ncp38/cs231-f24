@@ -34,7 +34,7 @@ Tue, Sep 17
 
 Thu, Sep 19
 : **K-maps with 3 and 4 variables**  
-: [**Homework 2**](homework/hw2/hw2.pdf){: .label .label-hw } due *Oct. 3*
+: [**Homework 2**](homework/hw2.pdf){: .label .label-hw } due *Oct. 3*
 
 Tue, Sep 24
 : **K-maps with any variables, integrated circuits**  
