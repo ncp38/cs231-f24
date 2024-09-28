@@ -1,0 +1,200 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[top=.7in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{url}
+\usepackage{amsmath}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{{\Large COMP 231\\Lab 5}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\vspace{.4in}
+
+\noindent For this lab exercise, you will create a NIOS II CPU-based
+system as described below. Submit your entire Quartus project folder
+as a ZIP file. Do not use any other archive/compression
+formats other than ZIP. \\
+
+%\noindent{\bf Due Date: 11.59.59pm, Friday. Nov. 11th 2016}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday. Apr. 7th 2017}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday. Nov. 17th 2017}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Tuesday. Nov. 27th 2018}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday. Apr. 5th 2019}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Wednesday. Nov. 13th 2019}. No late
+%work will be accepted.
+
+\section{Seven-Segment Display support}
+
+For the first part of the project, start by copying your {\tt lights} Nios
+project from the Lab 4 tutorial to a new folder. We will be adding support for
+the seven-segment display devices and driving them with a software-based
+lookup table. First, we will need to add the hardware support and connections
+for the SSDs.
+
+Return to the Qsys tool and add two new PIO (Parallel I/O) ports with
+a data path width of 8-bits and as an output port (Just like you did
+for green LEDs). Rename the first HEXA and the second HEXB. Make
+connections in Qsys to the Avalon bus in the same way as you did for
+the LED PIO port (clock, reset, etc.).
+
+Next, you will need to re-assign base addresses for the new
+ports. This may change the earlier set values for the switches and LED
+ports. Take note of the memory-mapped addresses for the switches,
+LEDS, HEXA, and HEXB.  You will need this information for the next
+section.
+
+Lastly, ensure that you export the output for the HEXA and HEXB ports,
+the same way you configured the switches and LEDs. Generate the HDL
+from Qsys and head back to Quartus.
+
+\section{VHDL Modification}
+
+Now we need to connect the output wires from HEXA and HEXB on the NIOS
+processor to the input wires for HEX0 and HEX1 SSD hardware on the
+DE2. To do this, we will need to modify the VHDL file, {\tt
+  lights.vhd}, that we had created during the tutorial.
+
+\noindent Qsys outputs a sample VHDL file to instantiate the Nios processor,
+given the names for the devices that you configured. You should verify
+the signal names in the sample file, which should be {\tt
+  nios\_system/nios\_system\_inst.vhd}.\\
+
+\noindent {\bf In the {\tt lights.vhd} file, you need to make minor changes to several parts:}\\
+
+\noindent {\bf PORT Section:}  In this portion, we need to declare the interface
+to the DE2 components. Add lines to the VHDL file like so:
+
+\begin{verbatim}
+    HEX0 : OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
+    HEX1 : OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+\end{verbatim}
+
+Ensure that all lines end in a semicolon, except for the last. \\
+
+\noindent {\bf ARCHITECTURE Section:}  This section should match the information
+from {\tt nios\_system\_inst.vhd}. Add new {\tt SIGNAL} lines that
+correspond to the 8-bit output ports. They should have names like {\tt
+  hexa\_export} and {\tt hexb\_export} and be placed in the {\tt PORT}
+portion of the {\tt ARCHITECTURE} block.
+
+Next, we need to declare two 8-bit buses to connect the HEXA port to
+HEX0 and HEXB to HEX1. Add the following lines to the {\tt
+  ARCHITECTURE} block after the {\tt END COMPONENT;} line:
+
+\begin{verbatim}
+   SIGNAL HEXA : std_logic_vector(7 downto 0);
+   SIGNAL HEXB : std_logic_vector(7 downto 0);
+\end{verbatim}
+
+\noindent {\bf BEGIN Section:} Lastly we need to bring everything together and
+make all of the connections. Right after the {\tt BEGIN} statement,
+add a sequence of mappings to connect the HEXA and HEXB wires to the
+HEX0 and HEX1 SSDs. For example:
+
+\begin{verbatim}
+  HEX0(0) <= HEXA(0);
+\end{verbatim}
+
+This statement attaches the low-order bit of the 8-bit HEXA wire to
+the low-order bit of the HEX0 SSD unit. Connect wires from HEXA to
+HEX0 and HEXB to HEX1. Both HEX0 and HEX1 only have seven input wires,
+so you only need to worry about wires $0\ldots6$.
+
+Lastly, in the {\tt PORT MAP} section, add mappings for {\tt
+  hexa\_export} to map to {\tt HEXA} and {\tt hexb\_export} to {\tt
+  HEXB}. {\bf Ensure that you have been careful with your commas and
+semicolons} and save your file. Back in Quartus, re-compile the entire
+project. If you are successful, you are done with the hardware setup
+and are ready to work on the software side of the project.
+
+\section{Assembly Language Programming}
+
+The final part of this assignment involves writing an assembly
+language program that reads an 8-bit value from the switch input and
+displays the value in hexadecimal format on the SSD units (and on the
+green LEDs). Start by working from the {\tt lights.s} file. As in the
+tutorial, create {\tt .equ} macros for the addresses of the PIO
+ports. Create one each for {\tt leds, switches, hexa,} and {\tt
+  hexb}. These may have changed with the addtion of the new PIO ports.
+
+To display a value on the seven-segment display, you need to issue a
+{\tt stbio} instruction to the address from the Qsys layout. The value
+you write to the address is a 7-bit value which corresponds to each
+segment of the display. Recall that the SSD device uses
+negative-asserted true logic, so a 0 bit value activates an LED
+segment and a 1 bit value deactivates a segment. For example, if we
+wanted to make an 8 display, we would write 7 zeroes to the
+display: {\tt 0x00}. To make only the top light segment display
+(segment 0), you would write all ones, except for the lowest bit (bit
+0): {\tt 0xfe} or {\tt 0x7e} (the highest-order bit is ignored, since
+the SSD inputs are only seven-bit values).\\
+
+\noindent {\bf Lookup Table:}  Rather than using the hardware
+circuitry that we created in Lab 2, we want to use a software lookup
+table to display the correct value on the SSD. To implement this, we
+will use a label, {\tt lut:}, to mark the beginning of some constant
+data in our assembly language program.
+
+
+To understand how a lookup table is implemented in assembly language,
+assume that we wanted to have a three-element array constant, {\tt a},
+with {\tt a[0] = 5, a[1] = 6,} and {\tt a[2] = 7}. We would arrange
+this in our assembly language program like this:
+
+\begin{verbatim}
+.data
+a:
+.word 5
+.word 6
+.word 7
+.end
+\end{verbatim}
+
+This code is placed after the end of our assembly program, before the
+{\tt .end} marker. The label {\tt a:} marks the address of the first
+element of the array (index 0). Each element is stored in a four-byte
+word, so to compute {\tt a[2]}, we would use the base address stored
+in {\tt a}, and add the size of each element (4 bytes) times the
+number of elements to skip over (2): $ a_2 = $ {\tt Mem[} $a +
+(4\times 2)${\tt ]}
+
+Construct a 16-element array, one for each possible 4-bit combination
+of values to display on an SSD. The value of each array element should
+be a 32-bit word, with the lowest 7-bits containing the bit pattern to
+illuminate the correct segments for the corresponding 4-bit
+hexadecimal value. For example, the value of {\tt lut[8]} should
+contain the 7-bit pattern ({\tt 0x00}) to illuminate all segments on
+the display.
+
+Once you have completed your array, modify the main loop driver to write the
+8-bit value from the switches to both HEXA and HEXB. You will have to read the
+8-bit value into two registers, use these values to determine the offsets into
+the lookup table, load the pattern values from the LUT and write them each to
+the correct SSD, as well as the LEDs.
+
+As an example, let's say that the value read from the switches is {\tt
+  1111 0001} (i.e. {\tt 0xf1}). You need to move {\tt 0001} into one register and {\tt
+  1111} into another. Next, load the value at ${\tt lut} + 4 \times
+1$ into a new register and ${\tt lut} + 4 \times 15$ into
+another. These registers should now contain the 7-bit patterns that
+can be written to the SSD using the {\tt stbio} instruction.
+
+\section*{Submission}
+
+Make sure you submit an entire project directory to Canvas. This
+should contain all of the Quartus II files. If you do not submit an
+fully functioning project, you will lose points. {\bf Double check
+  your work if you make changes to files and/or file locations.}
+
+\end{document}

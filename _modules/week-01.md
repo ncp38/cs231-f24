@@ -80,8 +80,9 @@ Tue, Oct 29
 
 Thu, Oct 31
 : **Assembly intro**
+: Happy Halloween!
 : [**Lab 4**](labs/lab4/){: .label .label-lab } due *Nov. 11*
-Happy Halloween!
+
 
 Tue, Nov 5
 : **NIOS** 

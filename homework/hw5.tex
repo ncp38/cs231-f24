@@ -1,0 +1,72 @@
+\documentclass[10pt]{article}
+\usepackage[top=1in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+%\maketitle
+
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{
+      \hspace{-3mm}
+      {\Large COMP 231-01}\\
+      {\Large Introduction to Computer Organization}\\
+      {\Large Homework 5}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\noindent{\bf Due Date: Tuesday, November 19}\\
+%\noindent{\bf Due Date: Monday, November 21st.}\\
+%\noindent{\bf Due Date: Friday, April 12th.}\\
+
+
+\begin{enumerate}
+
+\setlength\itemsep{10mm}
+
+\item Consider the following C code:
+
+\begin{verbatim}
+  int a[1000];
+  main() {
+
+     int r10 = 5;  // lower bound of array slice
+     int r16 = 10; // upper bound of array slice
+     ...
+     int r22 = f(r10, r16);
+     ...
+     r23 = r10 + r16 + r22;
+   }   
+
+   int f(int x, int y) {
+      int r10 = 0; // local sum
+      int r16 = 1; // local product
+      
+      for (int r17 = x; r17 < y; r17++) {
+         r10 += a[r17];
+         r16 *= a[r17];
+      }
+      return r10 + r16;
+}
+ 
+\end{verbatim}
+
+Convert this code to NIOS assembly. Assume that each of the integers
+that have register-like names live in the same register. Also assume
+that the array {\tt a[]} begins at memory address 1000. Show the code
+to allocate a stack frame and preserve both caller-save and
+callee-save registers.
+
+\end{enumerate}
+
+
+\end{document}
+

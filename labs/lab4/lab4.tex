@@ -1,0 +1,84 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[top=.7in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{url}
+\usepackage{amsmath}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{{\Large COMP 231\\Lab 4}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\vspace{.5in}
+
+\noindent For this lab exercise, you will create a NIOS II CPU-based
+system as described below. Submit your entire Quartus project folder
+as a ZIP file. Do not use any other archive/compression
+formats other than ZIP. \\
+
+%\noindent{\bf Due Date: 11.59.59pm, Monday, Oct. 28, 2019}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Mar. 22, 2019}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Wednesday, Oct. 31, 2018}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Tuesday, Oct. 31, 2017}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Monday, Mar. 20th, 2017}. No late
+%work will be accepted.
+
+\section{Nios II Tutorial}
+
+Read through and follow the exercise specified in the document, {\em
+  Introduction to the Altera Qsys System Integration Tool}, available on
+Canvas. Create the {\tt lights} Quartus project in your {\tt lab4} folder. {\bf Do
+not use other filenames or you will be in trouble}.
+
+In this exercise you will use the Qsys tool to construct a Nios CPU with a
+clock, some on-chip memory, a parallel input port, and a parallel output port.
+Once you have the system configured in Qsys, you should generate the hardware
+description language (HDL) that Quartus will use to compile the system.  Next,
+you will need to write a small program in VHDL to map the Nios system to the
+actual devices on the DE2-115.
+
+The tutorial contains some sections that we are not using for our assignment.
+We only need one HDL component -- we will be using VHDL, so the Verilog
+section (5.1.1) can be skipped. Secondly, we are only interested in programming
+the Nios CPU with assembly language. You can also safely skip section 7.2,
+which is a C program and not assembly.
+
+You should ensure that you have added both the Qsys generated HDL file as well
+as your VHDL code into the main Quartus program. Next, compile the project in
+Quartus. Remember to add your pin assignements from the {\tt DE2\_115.qsf}
+file. If you get an error like: ``{\tt Error: Can't generate netlist output
+  files$\ldots$}'', you will need to go to the {\em Settings} dialog box from
+the Assignments menu. Select the category for {\em EDA Tool Settings},
+subcategory {\em Simulation}. On this page, change the {\em Tool Name} option
+to {\tt <None>}.
+
+Once you have compiled your project, create the simple Nios assembly language
+program from the tutorial and put it into your {\em name}{\tt \_lab4}
+directory. Create a new project using the Altera Monitor Program that uses your
+Nios system and assembly language program.
+
+Next, download the Nios system to the DE2 using either the Quartus Programmer
+tool or the Altera Monitor Program. Verify that everything works correctly by
+stepping through your program in the monitor.
+
+\section*{Submission}
+
+Make sure you submit an entire project directory to Canvas. This should contain
+all of the Quartus II files. If you do not submit an fully functioning project,
+you will lose (many) points.
+
+\end{document}

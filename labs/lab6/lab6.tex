@@ -1,0 +1,143 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[top=.7in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{url}
+\usepackage{amsmath}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\lstset{language=C,basicstyle=\scriptsize}
+
+\begin{document}
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{{\Large COMP 231\\Lab 6}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\vspace{.5in}
+
+\noindent For this lab exercise, you will use a provided NIOS II CPU
+system. Your program must work on the provided Nios system and Quartus
+project. {\bf You only need to submit your assembly-language source
+file}.\\
+
+
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Apr. 29th, 2016}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Dec. 1st, 2016}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Apr. 26th, 2017}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Tuesday, Dec. 6th, 2017}. No late
+%work will be accepted.
+%\noindent{\bf Due Date: 11.59.59pm, Wednesday, Dec. 5th, 2018}.
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Apr. 26th, 2019}.
+%\noindent{\bf Due Date: 11.59.59pm, Wednesday, Dec. 4th, 2019}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Dec. 3rd, 2021}. No late
+%\noindent{\bf Due Date: 11.59.59pm, Friday, Apr. 29th, 2022}.
+%work will be accepted.
+
+\section*{Programming with Functions}
+
+This lab requires a functioning assembly-language implementation of
+the SSD lookup table from the last lab. Please contact me if you were
+unable to get the previous assignment working correctly.
+
+For this assignment, you will implement a Nios II assembly language that uses
+an external runtime library that follows the Nios calling conventions. Your
+program must adhere correctly to the conventions in order to work with the
+library code. The library contains the {\tt \_start} label where execution
+begins and will call your {\tt main()} function, having initialized devices and
+created the stack for you.
+
+\begin{lstlisting}[xleftmargin=.05\textwidth,linewidth=.9\textwidth,numbers=left,frame=single,float=htbp,captionpos=b]
+   int fib(int n) {
+     if (n <= 1) {
+       return n;
+     } else {
+       return fib(n-1) + fib(n-2);
+     }
+   }
+
+   int main(void) {
+      int val, res;
+      val = read();      // read 8-bit value from switches
+      res = fib(val);
+      printHex(res);     // print 32-bit value to SSDs in hex
+      _printResult(res); // print 32-bit value to LCD display in decimal
+      return 0;
+   }
+\end{lstlisting}
+
+To complete this lab, you will need to implement the following instructions
+using the proper Nios calling conventions and stack frames:
+
+\begin{itemize}
+  \item {\bf int main(void)} -- This is the {\tt main()} function in the
+    program listed above. You should use the label {\tt main:} for this
+    function, the {\tt \_start} label is defined by the library code. You can
+    assume that the runtime library has setup the stack for you and initialized
+    its own internal state.
+
+    The main function calls three functions that you must implement: {\tt read(),
+      fib(),} and {\tt printHex()}. It also calls the {\tt \_printResult()}
+    function which is provided by the runtime library. Since {\tt main()} is
+    both a callee (from {\tt \_start}) and a caller, you must follow the calling
+    convention rules that may apply.
+
+  \item {\bf int read(void)} -- This function reads an 8-bit value from the switches
+    and returns it to the main function. This function should be very short.
+
+  \item {\bf int fib(int n)} -- The C code for this function is listed above.
+    Your function must adhere to calling conventions. Since it is a recursive
+    function, you {\em must} save the values of $n$ to the stack in some fashion.
+
+  \item {\bf void printHex(int val)} -- This function takes a 32-bit value and
+    displays it in hexadecimal on the bank of eight SSDDs. This function relies
+    on a helper function, {\tt printNybble()}, which writes the hex character
+    for a 4-bit number to a given SSDD. To implement this function, you should
+    write a loop that takes the next 4-bits from {\tt val} and calls {\tt
+      printNybble()} with it on the next SSDD. The SSDD device addresses start
+    at the value represented by {\tt h0} (see {\tt addrs.s}) and increase by
+    16-bits for each SSDD.
+
+  \item {\bf void printNybble(int val, void *address)}  -- This function
+    takes a 4-bit value and the address of an SSDD. You should adapt your
+    Lab 5 code to take the 4-bit value, lookup the 7-bit SSD value and
+    write it to the device located at {\tt address}.
+\end{itemize}
+
+The {\tt void \_printResult(int val)} function takes a 32-bit integer and
+writes it to the LCD display in decimal. You do not need to implement this.
+This function is defined in the runtime library, {\tt run.s}. You may examine
+any assembly code in this file to help you understand correct usage of the calling
+conventions (and to see how the LCD device works, if you are interested).
+
+\section*{Project Setup}
+
+For this lab, you are provided a functioning Quartus project with support for
+all 8 hex displays (SSDDs), the 16x2 LCD display, 8 switches, and 8 LEDs. You
+are free to look at the Quartus and Platform Designer projects, but if you
+change any of the device addresses, your lab may not work correctly. The
+device addresses are stored in {\tt addrs.s} and included into both your lab
+and the library assembly language files. The leftmost (lowest 4-bits) SSDD is
+named {\tt h0}, which you can use as a name that can be used with {\tt movia}.
+
+You should write all of your functions in {\tt lab6.s}, leaving {\tt run.s}
+alone. You will need to create an Altera Monitor Program project for this
+assignment, just as you did in Labs 4 and 5. You should add both {\tt lab6.s}
+and {\tt run.s} files to the project. They will be linked together automatically
+so you can call the {\tt \_printResult()} function without issue.\\
+
+{\bf NOTE:} You must comment your code. Submitting a correct, but
+uncommented solution will result in a 25\% penalty deduction.
+
+When you have your program working, submit your complete assembly
+language program to Canvas.
+
+\end{document}
