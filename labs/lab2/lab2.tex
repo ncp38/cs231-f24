@@ -1,0 +1,86 @@
+\documentclass[10pt]{article}
+\usepackage[top=1in,bottom=1.1in,left=.8in,right=.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{url}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+%\maketitle
+
+\hspace{-5mm}
+\begin{minipage}{0.65\linewidth}
+  \textbf{{\Large COMP 231\\
+      Introduction to Computer Organization\\Lab 2}}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+  \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
+\end{minipage}
+
+\vspace{.25in}
+
+This lab will consist of a Quartus project folder, submitted as a
+single ZIP file, via Canvas (\url{http://canvas.rhodes.edu/}).
+{\bf You must submit a .zip file in the following format, otherwise
+  you will lose points.} When you submit your project, rename the
+project folder to <{\em name\_lab1}>, where the name is your Rhodes
+email ID. Then, ZIP the folder up and upload it to Canvas. Do not
+use any other compression/archiving format other than ZIP.
+
+\section*{Hardware Adder}
+
+For this lab, you will be creating a circuit which takes a pair of two-bit
+values from the switches on the DE2-115, adds them together, creating a 3-bit
+value which will be displayed on the LED lights. Create a new Quartus project,
+{\tt adder}, in your {\em name}{\tt\_lab2} folder.
+
+The inputs are signified as $a_1 a_0$ and $b_1 b_0$. The output is
+signified as $c_2 c_1 c_0$. You are computing the following expression
+assuming unsigned binary integer representation:
+
+\begin{center}
+\begin{tabular}[h]{cccc}
+    &       & $a_1$ & $a_0$ \\
+  + &       & $b_1$ & $b_0$ \\\hline
+    & $c_2$ & $c_1$ & $c_0$ \\
+\end{tabular}
+\end{center}
+
+\section*{Analysis}
+
+You will need to compute a truth table that will help you determine
+the values for $c_2$, $c_1$, and $c_0$. From this truth table, derive
+minimal sum of products equations for each of the output functions.
+You will need to turn in this analysis on the due date in class on
+paper. {\bf You should not use a design based on the ripple-carry
+  adders discussed in class.} Your solution should perform the
+addition directly in terms of all of the input signals, without
+introducing the propagation delay inherent in a ripple-carry system.
+
+\section*{Circuit Design}
+
+Using Quartus II, implement the combinational circuits that you
+derived. For the addition circuit, you may only use {\bf and gates}, {\bf or
+gates}, or {\bf inverters/not gates}. You may not use any built-in addition circuits
+from the Quartus library. Compile and deploy your design to the DE2
+board.  Verify that the design and implementation is correct and
+works. It will be easier to use the DE2-115 pin assignments file that
+can be found on Canvas, than the physical pin names as used in the
+tutorial. You can use the logical names {\tt LEDR[0], LEDR[1]}, and
+{\tt SW[0]}, etc. as the pin names associated with the switches and
+LED lights. {\bf Your submission should use multiple blocks (one for
+  each output).} There is a tutorial document on Canvas about using
+blocks within the Quartus schematic editor.
+
+
+
+\section*{Submission}
+
+When you have completed this entire exercise and have a functioning
+program, submit your lab 2 project folder as specified above to Canvas.
+
+\end{document}
+
