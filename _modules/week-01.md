@@ -46,7 +46,7 @@ Thu, Sep 26
 
 Tue, Oct 1 
 : **Ripple-carry adders, multiplexing** 
-: [**Lab 2**](labs/lab2/){: .label .label-lab } due *Oct. 14*
+: [**Lab 2**](labs/lab2/lab2.pdf){: .label .label-lab } due *Oct. 14*
 : **Reading**{: .label .label-reading} Essentials, ch. 3.7
   
 Thu, Oct 3
@@ -61,7 +61,7 @@ Thu, Oct 10
 
 Tue, Oct 15
 : **Signed values and 2s complement** 
-: [**Lab 3**](labs/lab3/){: .label .label-lab } due *Oct. 25*
+: [**Lab 3**](labs/lab3/lab3.pdf){: .label .label-lab } due *Oct. 25*
 : **Reading**{: .label .label-reading} Essentials, ch. 2.4
 
 Thu, Oct 17
@@ -81,7 +81,7 @@ Tue, Oct 29
 Thu, Oct 31
 : **Assembly intro**
 : Happy Halloween!
-: [**Lab 4**](labs/lab4/){: .label .label-lab } due *Nov. 11*
+: [**Lab 4**](labs/lab4/lab4.pdf){: .label .label-lab } due *Nov. 11*
 
 
 Tue, Nov 5
@@ -93,7 +93,7 @@ Thu, Nov 7
 
 Tue, Nov 12
 : **NIOS arrays and functions**  
-: [**Lab 5**](labs/lab5/){: .label .label-lab } due *Nov. 20*
+: [**Lab 5**](labs/lab5/lab5.pdf){: .label .label-lab } due *Nov. 20*
 : **Reading**{: .label .label-reading} Chapter 4 (buses and memory).
 
 Thu, Nov 14
@@ -106,7 +106,7 @@ Tue, Nov 19
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
-: [**Lab 6**](labs/lab6/){: .label .label-lab } due *Dec. 9*
+: [**Lab 6**](labs/lab6/lab6.pdf){: .label .label-lab } due *Dec. 9*
 
 Tue, Nov 26
 : **Exam II**{: .label .label-exam }
