@@ -47,6 +47,7 @@ Thu, Sep 26
 Tue, Oct 1 
 : **Ripple-carry adders, multiplexing** 
 : [**Lab 2**](labs/lab2/lab2.pdf){: .label .label-lab } due *Oct. 14*
+: [**Block Assignment Instructions**](resources/block-tutorial.pdf){: .label .label-lab }
 : **Reading**{: .label .label-reading} Essentials, ch. 3.7
   
 Thu, Oct 3
