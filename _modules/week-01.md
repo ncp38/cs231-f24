@@ -52,7 +52,7 @@ Tue, Oct 1
   
 Thu, Oct 3
 : **code converters, other arithmetic/logic circuits, and ALU** 
-: [**Homework 3**](homework/hw3){: .label .label-hw } due *Oct. 17*
+: [**Homework 3**](homework/hw3/hw3.pdf){: .label .label-hw } due *Oct. 17*
 
 Tue, Oct 8
 : **Sequential circuits and flip-flops**  
