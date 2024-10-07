@@ -67,7 +67,7 @@ Tue, Oct 15
 
 Thu, Oct 17
 : **Floating point numbers, ASCII** 
-: [**Homework 4**](homework/hw4){: .label .label-hw } due *Oct. 31*
+: [**Homework 4**](homework/hw4.pdf){: .label .label-hw } due *Oct. 31*
 : **Reading**{: .label .label-reading} Essentials, ch. 2.5-2.6
 
 Tue, Oct 22
@@ -88,7 +88,7 @@ Thu, Oct 31
 
 Tue, Nov 5
 : **NIOS** 
-: [**Homework 5**](homework/hw5){: .label .label-hw } due *Nov. 19*
+: [**Homework 5**](homework/hw5.pdf){: .label .label-hw } due *Nov. 19*
 
 Thu, Nov 7
 : **NIOS ALU, L/S, Control Flow** 
@@ -104,7 +104,7 @@ Thu, Nov 14
 
 Tue, Nov 19
 : **FDXW cycle and pipelining**
-: [**Homework 6**](homework/hw6){: .label .label-hw } due *Dec. 3*
+: [**Homework 6**](homework/hw6.pdf){: .label .label-hw } due *Dec. 3*
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
