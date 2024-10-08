@@ -83,7 +83,7 @@ Thu, Oct 31
 : **Assembly intro**
 : Happy Halloween!
 : [**Lab 4**](labs/lab4/lab4.pdf){: .label .label-lab } due *Nov. 11*
-: [**Lab 4**](resources/assembly.pdf){: .label .label-reading } due *Nov. 11*
+: [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading } due *Nov. 11*
 
 
 Tue, Nov 5
