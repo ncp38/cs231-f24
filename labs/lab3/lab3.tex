@@ -35,7 +35,7 @@ use any other compression/archiving format other than ZIP.
 In this lab, you will create a combinational and sequential logic
 circuit that acts as a seven segment display (SSD) driver. The
 circuit will display a single hexadecimal value on one of the LED SSD
-devices on the DE2 board. The display consists of seven LED segments,
+devices on the DE2 board (see below for appropriate outputs for each hexadecimal number). The display consists of seven LED segments,
 each of which are connected to a single pin:
 
 \begin{center}
@@ -61,6 +61,10 @@ The SSD is an ``active-low'' device, which means that a 0 value
 illuminates the LED and a 1 turns it off. You can perform your design
 normally and just add an inverter to the final result of the circuit
 to get it to work correctly with active-low hardware.
+
+\begin{center}
+\includegraphics[scale=1.0]{hex7seg.png}
+\end{center}
 
 \section{Single SSD Circuit}
 
