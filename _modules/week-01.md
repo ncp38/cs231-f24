@@ -61,12 +61,13 @@ Thu, Oct 10
 : **Sequential and combinatorial circuits**  
 
 Tue, Oct 15
-: **Signed values and 2s complement** 
+: 
 : [**Lab 3**](labs/lab3/lab3.pdf){: .label .label-lab } due *Oct. 25*
+: [**Counter Circuit**](labs/lab3/lab3.pdf){: .label .label-lab } This is the *counter circuit* from lecture/the assigned reading.
 : **Reading**{: .label .label-reading} Essentials, ch. 2.4
 
 Thu, Oct 17
-: **Floating point numbers, ASCII** 
+: **Signed values and 2s complement** 
 : [**Homework 4**](homework/hw4.pdf){: .label .label-hw } due *Oct. 31*
 : **Reading**{: .label .label-reading} Essentials, ch. 2.5-2.6
 
@@ -74,7 +75,7 @@ Tue, Oct 22
 : No class, Fall break
 
 Thu, Oct 24
-: **Exam review**  
+: **Exam review and Floating point numbers, ASCII**   
 
 Tue, Oct 29
 : **Exam I**{: .label .label-exam }
