@@ -52,7 +52,7 @@ Tue, Oct 1
   
 Thu, Oct 3
 : **code converters, other arithmetic/logic circuits, and ALU** 
-: [**Homework 3**](homework/hw3.pdf){: .label .label-hw } due *Oct. 17*
+: [**Homework 3**](homework/hw3.pdf){: .label .label-hw } due *Oct. 20*
 
 Tue, Oct 8
 : **Sequential circuits and flip-flops**  
@@ -61,7 +61,7 @@ Thu, Oct 10
 : **Sequential and combinatorial circuits**  
 
 Tue, Oct 15
-: 
+: **Sequential and combinatorial circuits, cont.** 
 : [**Lab 3**](labs/lab3/lab3.pdf){: .label .label-lab } due *Oct. 25*
 : [**Counter Circuit**](labs/lab3/lab3.pdf){: .label .label-lab } This is the *counter circuit* from lecture/the assigned reading.
 : **Reading**{: .label .label-reading} Essentials, ch. 2.4
