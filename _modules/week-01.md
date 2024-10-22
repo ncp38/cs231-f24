@@ -68,11 +68,12 @@ Tue, Oct 15
 
 Thu, Oct 17
 : **Signed values and 2s complement** 
-: [**Homework 4**](homework/hw4.pdf){: .label .label-hw } due *Oct. 31*
+: [**Exam Review Guide**](homework/hw4b.pdf){: .label .label-hw }
 : **Reading**{: .label .label-reading} Essentials, ch. 2.5-2.6
 
 Tue, Oct 22
 : No class, Fall break
+:
 
 Thu, Oct 24
 : **Exam review and Floating point numbers, ASCII**   
