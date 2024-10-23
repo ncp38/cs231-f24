@@ -68,7 +68,7 @@ Tue, Oct 15
 
 Thu, Oct 17
 : **Signed values and 2s complement** 
-: [**Exam Review Guide**](homework/hw4b.pdf){: .label .label-hw }
+: [**Exam Review Problems**](homework/hw4b.pdf){: .label .label-hw }
 : **Reading**{: .label .label-reading} Essentials, ch. 2.5-2.6
 
 Tue, Oct 22
