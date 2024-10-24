@@ -63,7 +63,7 @@ Thu, Oct 10
 Tue, Oct 15
 : **Sequential and combinatorial circuits, cont.** 
 : [**Lab 3**](labs/lab3/lab3.pdf){: .label .label-lab } due *Oct. 25*
-: [**Counter Circuit**](labs/lab3/lab3.pdf){: .label .label-lab } This is the *counter circuit* from lecture/the assigned reading.
+: [**Counter Circuit**](labs/lab3/JKCounter.png){: .label .label-lab } This is the *counter circuit* from lecture/the assigned reading.
 : **Reading**{: .label .label-reading} Essentials, ch. 2.4
 
 Thu, Oct 17
