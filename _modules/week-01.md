@@ -76,7 +76,8 @@ Tue, Oct 22
 :
 
 Thu, Oct 24
-: **Exam review and Floating point numbers, ASCII**   
+: **Exam review and Floating point numbers, ASCII** 
+: [**Exam Review Solutions**](homework/hw4bsols.pdf){: .label .label-hw }  
 
 Tue, Oct 29
 : **Exam I**{: .label .label-exam }

@@ -129,19 +129,67 @@
 
 \item Consider the boolean algebra expression $F = \bar{A} *B + A*B*C$.  Create a k-map for this expression and use the k-map to derive the MSOP (minimal sum of products).
 
+\includegraphics[scale=.8]{Problem5kmap.png}
+\includegraphics[scale=.8]{Problem5minimized.png}
+\includegraphics[scale=.6]{Problem5algebra.png}
+
 \item Consider the boolean algebra expression $F = \bar{A}\bar{B}\bar{C}\bar{D}+\bar{A}\bar{B}C\bar{D}+\bar{A}BC\bar{D}+\bar{A}BCD+A\bar{B}\bar{C}\bar{D}+ABC\bar{D}+ABCD$.  Create a k-map for this expression and use the k-map to derive the MSOP (minimal sum of products).
+
+\includegraphics[scale=.8]{Problem6kmap.png}
+\includegraphics[scale=.8]{Problem6minimized.png}
+\includegraphics[scale=.6]{Problem6algebra.png}
 
 \item Create a truth table, a MSOP boolean algebra expression, and draw a circuit for a function that takes in two variables and returns 1 if the function is even and 0 if the function is odd.  (For this situation, we don't care whether a zero is evaluated as even or odd.) \textbf{For this problem, use only and gates, or gates, and not gates.}
 
+\includegraphics[scale=.8]{Problem7kmap.png}
+\includegraphics[scale=.8]{Problem7minimized.png}
+\includegraphics[scale=.6]{Problem7algebra.png}
+\includegraphics[scale=.8]{Problem7circuit.png}
+
 \item Create a truth table, a MSOP boolean algebra expression, and draw a circuit for a function that takes in three variables and returns 1 only if two of the inputs are 1. \textbf{For this problem, use only and gates, or gates, and not gates.}
+
+\includegraphics[scale=.8]{Problem8kmap.png}
+\includegraphics[scale=.8]{Problem8minimized.png}
+\includegraphics[scale=.6]{Problem8algebra.png}
+\includegraphics[scale=.6]{Problem8circuit.png}
 
 \item Consider the following circuit, with a T flipflop and a JK flip flop.  Create a characteristic table that shows what the next state will be for this circuit. 
 
 \includegraphics[scale=.8]{ExampleFFProblem.png}
 
+X $Q_1$  $Q_0$ | $Q_1(t+1)$  $Q_0(t+1)$
+
+0      0         0   \hspace{2cm}          0                1
+
+0      0         1      \hspace{2cm}       0                1
+
+0      1         0       \hspace{2cm}      1                1
+
+0      1         1        \hspace{2cm}     1                0
+
+1      0         0    \hspace{2cm}         1                1
+
+1      0         1     \hspace{2cm}        1                1
+
+1      1         0      \hspace{2cm}       0                1
+
+1      1         1      \hspace{2cm}       0                0
+
 \item Consider the following circuit.  What is the characteristic table for its output?
 
 \includegraphics[scale=.8]{FlipFlopBehaviourProblemWithLabels.png}
+
+That of a JK flipflop; this is how a JK is implemented!
+
+J  K  | Q
+
+0  0  | Q
+
+0  1  | 0
+
+1  0  | 1
+
+1  1  | $\bar{Q}$
 
 \item What is the use of a half adder?  In what situation would this be used?
 
