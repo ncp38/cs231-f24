@@ -84,10 +84,10 @@ Tue, Oct 29
 
 Thu, Oct 31
 : **Assembly intro**
+: [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading } due *Nov. 11*
 : Happy Halloween!
 : [**Lab 4**](labs/lab4/lab4.pdf){: .label .label-lab } due *Nov. 11*
-: [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading } due *Nov. 11*
-
+: [**Introduction to the Qsys Tool**](resources/Introduction_to_the_Qsys_Tool.pdf){: .label .label-reading } Part of Lab 4
 
 Tue, Nov 5
 : **NIOS** 
