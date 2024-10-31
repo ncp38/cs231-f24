@@ -92,6 +92,7 @@ Thu, Oct 31
 Tue, Nov 5
 : **NIOS** 
 : [**Homework 5**](homework/hw5.pdf){: .label .label-hw } due *Nov. 19*
+: [**NIOS II Simulator**](https://cpulator.01xz.net/?sys=nios-de2-115){: .label .label-lab } 
 
 Thu, Nov 7
 : **NIOS ALU, L/S, Control Flow** 
