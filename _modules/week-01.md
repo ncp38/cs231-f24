@@ -91,7 +91,7 @@ Thu, Oct 31
 
 Tue, Nov 5
 : **NIOS** 
-: [**Homework 5**](homework/hw5.pdf){: .label .label-hw } due *Nov. 19*
+: [**Homework 4**](homework/hw5.pdf){: .label .label-hw } due *Nov. 19*
 : [**NIOS II Simulator**](https://cpulator.01xz.net/?sys=nios-de2-115){: .label .label-lab } 
 : [**NIOS II Reference Guide**](resources/NIOS II (Classic) Reference.pdf){: .label .label-reading } 
 
@@ -109,7 +109,7 @@ Thu, Nov 14
 
 Tue, Nov 19
 : **FDXW cycle and pipelining**
-: [**Homework 6**](homework/hw6.pdf){: .label .label-hw } due *Dec. 3*
+: [**Homework 5**](homework/hw6.pdf){: .label .label-hw } due *Dec. 3*
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
