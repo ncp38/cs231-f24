@@ -26,8 +26,11 @@ seo:
 - [Syllabus](syllabus/syllabus-231-f24.pdf) and [additional policies](syllabus/additional-policies.pdf).
 
 ## Resources
+- : [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading }
 - [Confluence](https://rhodescollege.atlassian.net/wiki/spaces/HPCL/pages/2661351440/Overview+of+the+Hardware+Lab+Environment): Guide for the Hardware Lab and Quartus
-     
+- [Digital](https://github.com/hneemann/Digital?tab=readme-ov-file): Simulator for digital logic and circuits
+- [**NIOS II Simulator**](https://cpulator.01xz.net/?sys=nios-de2-115){: .label .label-lab } 
+- [**NIOS II Reference Guide**](resources/NIOS II (Classic) Reference.pdf){: .label .label-reading } 
 
 ## Calendar
 {% for module in site.modules %}

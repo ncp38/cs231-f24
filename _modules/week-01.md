@@ -81,10 +81,11 @@ Thu, Oct 24
 
 Tue, Oct 29
 : **Exam I**{: .label .label-exam }
+: [**Exam Solution**](https://rhodes.instructure.com/courses/7274/files/934106?module_item_id=232876){: .label .label-hw }
 
 Thu, Oct 31
 : **Assembly intro**
-: [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading } due *Nov. 11*
+: [**Assembly Language Textbook**](resources/assembly.pdf){: .label .label-reading }
 : Happy Halloween!
 : [**Lab 4**](labs/lab4/lab4.pdf){: .label .label-lab } due *Nov. 11*
 : [**Introduction to the Qsys Tool**](resources/Introduction_to_the_Qsys_Tool.pdf){: .label .label-reading } Part of Lab 4
