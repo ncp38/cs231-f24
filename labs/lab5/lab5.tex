@@ -42,7 +42,7 @@ the seven-segment display devices and driving them with a software-based
 lookup table. First, we will need to add the hardware support and connections
 for the SSDs.
 
-Return to the Qsys tool and add two new PIO (Parallel I/O) ports with
+Return to the Qsys tool (see page 11) and add two new PIO (Parallel I/O) ports with
 a data path width of 8-bits and as an output port (Just like you did
 for green LEDs). Rename the first HEXA and the second HEXB. Make
 connections in Qsys to the Avalon bus in the same way as you did for
@@ -124,7 +124,7 @@ The final part of this assignment involves writing an assembly
 language program that reads an 8-bit value from the switch input and
 displays the value in hexadecimal format on the SSD units (and on the
 green LEDs). Start by working from the {\tt lights.s} file. As in the
-tutorial, create {\tt .equ} macros for the addresses of the PIO
+tutorial assembly code, create {\tt .equ} macros for the addresses of the PIO
 ports. Create one each for {\tt leds, switches, hexa,} and {\tt
   hexb}. These may have changed with the addtion of the new PIO ports.
 
