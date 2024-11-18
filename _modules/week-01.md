@@ -101,7 +101,7 @@ Thu, Nov 7
 
 Tue, Nov 12
 : **NIOS arrays and functions**  
-: [**Lab 5**](labs/lab5/lab5.pdf){: .label .label-lab } due *Nov. 20*
+: [**Lab 5**](labs/lab5/lab5.pdf){: .label .label-lab } due *Nov. 22*
 : **Reading**{: .label .label-reading} Chapter 4 (buses and memory).
 
 Thu, Nov 14
@@ -110,6 +110,7 @@ Thu, Nov 14
 
 Tue, Nov 19
 : **FDXW cycle and pipelining**
+: [**Exam II Review Problems**](homework/exam2Review.pdf){: .label .label-hw }
 : [**Homework 5**](homework/hw6.pdf){: .label .label-hw } due *Dec. 3*
 
 Thu, Nov 21
