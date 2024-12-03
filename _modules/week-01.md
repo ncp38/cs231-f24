@@ -111,7 +111,7 @@ Thu, Nov 14
 Tue, Nov 19
 : **FDXW cycle and pipelining**
 : [**Exam II Review Problems**](homework/exam2Review.pdf){: .label .label-hw }
-: [**Homework 5**](homework/hw6.pdf){: .label .label-hw } due *Dec. 3*
+: [**Homework 5**](homework/hw6.pdf){: .label .label-hw } due *Dec. 5*
 
 Thu, Nov 21
 : **Pipelining and Exam Review**
