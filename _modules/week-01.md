@@ -100,21 +100,21 @@ Thu, Nov 7
 : **NIOS ALU, L/S, Control Flow** 
 
 Tue, Nov 12
-: **NIOS arrays and functions**  
+: **NIOS III**  
 : [**Lab 5**](labs/lab5/lab5.pdf){: .label .label-lab } due *Nov. 22*
 : **Reading**{: .label .label-reading} Chapter 4 (buses and memory).
 
 Thu, Nov 14
-: **NIOS functions and buses**  
+: **NIOS IV** 
 : **Reading**{: .label .label-reading} Chapter 4 (FDXW cycle) and Chapter 5 (Pipelining).
 
 Tue, Nov 19
-: **FDXW cycle and pipelining**
+: **NIOS arrays and pseudoinstructions** 
 : [**Exam II Review Problems**](homework/exam2Review.pdf){: .label .label-hw }
 : [**Homework 5**](homework/hw6.pdf){: .label .label-hw } due *Dec. 5*
 
 Thu, Nov 21
-: **Pipelining and Exam Review**
+: **Exam Review**
 : [**Lab 6**](labs/lab6/lab6.pdf){: .label .label-lab } due *Dec. 9*
 
 Tue, Nov 26
@@ -126,13 +126,16 @@ Thu, Nov 28
 Happy Thanksgiving!
 
 Tue, Dec 3
-: **Memory and in-class evaluations**
+: **NIOS Functions**
 
 Thu, Dec 5
-: **Caching-direct mapped (DM) and fully associative (FA)**
+: **NIOS functions II and buses//FDXW cycle and pipelining**
+: [**Function Translation Problem**](resources/functions.c.txt){: .label .label-lab }
+: [**Assembly Translation (with no calling conventions)**](resources/functions.s.txt){: .label .label-lab }
+: [**Assembly Translation (completely finalized)**](resources/functions.sComplete.txt){: .label .label-lab }
 
 Tue, Dec 10
-: **Final Exam Review**  
+: **Memory and Exam Review** 
 
 Thu, Dec 12
 : Reading Day
