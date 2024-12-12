@@ -18,7 +18,7 @@
       \hspace{-3mm}
       {\Large COMP 231-01}\\
       {\Large Introduction to Computer Organization}\\
-      {\Large Final Exam Review}}
+      {\Large Final Exam Review Solutions}}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
   \includegraphics[scale=.3]{../../logos/rhodes-logo.jpg}
@@ -58,29 +58,81 @@ int exponentiate(int base, int power)
     \end{verbatim}
 
 Translate this function into assembly language, using the calling conventions.  
-    \vspace{3in}
+
+\newpage
+
+    \begin{verbatim}
+#Note that this function assumes the stack pointer has already been 
+#initiated appropriately in the main function.
+#base is passed in through r4 and power through r5, by the register conventions
+exponentiate:
+         bgt r5, r0, ONERETURN
+         subi sp, sp, 8 #Reserve stack space for two values
+
+         subi r5, r5, 1 #We can pass this without saving its original value since we don't use it afterward.
+
+         stw r4, 0(sp)
+         stw ra, 4(sp)
+
+         call exponentiate
+
+         ldw ra, 4(sp)
+         ldw r4, 0(sp)
+
+         mul r2, r2, r4
+
+         addi sp, sp, 8 #Deallocating stack space.
+
+         ret
+
+         ONERETURN:
+                  movi r2, 1
+                  ret
+    \end{verbatim}
+
+
+
 \newpage
 \item The code below is an assembly language program that has been improperly translated and does not follow the calling conventions.  Find and correct the errors in this program.  (There are intended to be 8 errors.  Some will be related to the calling conventions, but others will be related to other aspects of the program.)
     \begin{verbatim}
-#This function takes the values in memory location 1000 and applies the MATHFUNC to it.
-#Then, this function adds that same value (from MEM 1000) with the results of the MATHFUNC operation.
-_start
+\#This function takes the values in memory location 1000 and applies the MATHFUNC to it.
+\#Then, this function adds that same value (from MEM 1000) with the results of the MATHFUNC operation.
+\_start
 ldw r9, 1000
 
 call MATHFUNC
 
 add r0, r9, r2
 
-MATHFUNC: #This function triples the argument value and adds 2 to it, then returns that value.
+MATHFUNC: \#This function triples the argument value and adds 2 to it, then returns that value.
 call FUNC
 addi r9, 2
 ret
 
 
-FUNC:  #This function takes in an argument, triples the given value, and returns that value.
+FUNC:  \#This function takes in an argument, triples the given value, and returns that value.
 multi r9, r9, 3
     \end{verbatim}
 
+Error list:
+\begin{itemize}
+\item \_start doesn't have a colon (\_start:).
+\item ldw takes in an offset/register value; this could be written correctly as ldw r9, 1000(r0).
+\item r9 is a caller-save register, and we don't save it before making a call!
+\item r0 can not be written to; it always contains 0.
+\item MATHFUNC - r9 is a caller-save register, and we don't save it before making a call!
+\item MATHFUNC - the argument (r9) is not passed in!  r9 should be stored in r4.
+\item FUNC - the argument (r9) is not passed in!  r9 should be stored in r4.
+\item MATHFUNC - the return value is not passed out in r2.
+\item FUNC - the return value is not passed out in r2.
+\item MATHFUNC does not save the ra!  This causes an infinite loop.
+\item addi requires three arguments; this could be correctly written addi r9, r9, 2.
+\item FUNC - there is no return statement!
+\item There is no branch statement after main and before MATHFUNC...and so execution will continue into MATHFUNC, which is not intended.
+
+\end{itemize}
+
+This program ended up with a lot more errors than just 8 (13, in total).  Give yourself a brief round of applause if you caught 10 or more of these errors!
 
     \vspace{1in}
 
@@ -100,20 +152,70 @@ int factorial(int input)
     \end{verbatim}
 
 Write an assembly program to calculate the factorial value of 10.  To do this, write the main function and also translate this into assembly language, using the calling conventions.  
-    \vspace{3in}
+    \vspace{.5in}
+
+    \begin{verbatim}
+#Note that this function assumes the stack pointer has already been 
+#initiated appropriately in the main function.
+#base is passed in through r4 and power through r5, by the register conventions
+
+_start:
+         movia sp, stack #Initialize the stack.  Remember to set up the corresponding part at the end of the program too!
+
+         movi r4, 10
+         call factorial
+         #We now have the result of 10 factorial stored in r2!
+	br END #Prevent accidental execution of factorial!
+factorial:
+         blt r5, r0, ONERETURN
+         subi sp, sp, 4 #Reserve stack space for one value
+
+         subi r4, r4, 1 #We can pass this without saving its original value since we don't use it afterward.
+
+         stw ra, 0(sp)
+
+         call factorial
+
+         ldw ra, 0(sp)
+
+         mul r2, r2, r4
+
+         addi sp, sp, 4 #Deallocating stack space.
+
+         ret
+
+         ONERETURN:
+                  movi r2, 1
+                  ret
+END:
+.skip 500 #These two lines set up a 500-byte storage space for the stack.
+stack:
+.end
+
+    \end{verbatim}
 
 \newpage
 
 
 \item What is meant by the term spatial locality?
 
+Variables located near each other in memory (ex., values stored in the same row of an array)
+
 \item What is meant by the term temporal locality?
+
+A variable that has been used recently is likely to be used again.
 
 \item What is meant by the term pipelining?
 
+Pipelining refers to the process by which commands are staged; instead of completing a whole command before moving to the next one, the command is split into individual parts so that resources can be maximized.  In this approach, the fetch component of one command might be in progress while the ALU addition component of another command is executing.
+
 \item Why is out of order processing used in assembly language?
 
+OOP (out-of-order processing) is used to speed up execution of code; if the CPU can be working on more than one instruction at once, the average time for an instruction to be completed can be reduced.
+
 \item What is the inherent conflict between branches and pipelining?
+
+Pipelining seeks to improve run time by working on several instructions at once.  This process is hampered if the CPU doesn't know which branch will be executed, though there are several strategies to counter this.
 
 \end{itemize}
 
