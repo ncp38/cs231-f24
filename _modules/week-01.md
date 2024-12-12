@@ -137,6 +137,7 @@ Thu, Dec 5
 Tue, Dec 10
 : **Memory and Exam Review** 
 : [**Final Exam Review Problems**](homework/finalExamReview.pdf){: .label .label-hw }
+: [**Final Exam Review Solutions**](homework/finalExamReviewSolutions.pdf){: .label .label-hw }
 
 Thu, Dec 12
 : Reading Day
