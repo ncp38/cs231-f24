@@ -129,13 +129,13 @@ Tue, Dec 3
 : **NIOS Functions**
 
 Thu, Dec 5
-: **NIOS functions II and buses//FDXW cycle and pipelining**
+: **NIOS functions II and buses**
 : [**Function Translation Problem**](resources/functions.c.txt){: .label .label-lab }
 : [**Assembly Translation (with no calling conventions)**](resources/functions.s.txt){: .label .label-lab }
 : [**Assembly Translation (completely finalized)**](resources/functions.sComplete.txt){: .label .label-lab }
 
 Tue, Dec 10
-: **Memory and Exam Review** 
+: **Pipelining, Memory, and Exam Review** 
 : [**Final Exam Review Problems**](homework/finalExamReview.pdf){: .label .label-hw }
 : [**Final Exam Review Solutions**](homework/finalExamReviewSolutions.pdf){: .label .label-hw }
 
